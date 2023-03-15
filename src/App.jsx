@@ -1,26 +1,32 @@
-import React from 'react';
+import React from 'react'
 import {
   YMaps,
   Map,
   Placemark,
   GeolocationControl,
-} from '@pbe/react-yandex-maps';
+  ZoomControl,
+} from '@pbe/react-yandex-maps'
 
-import './styles/index.css';
-import marker1 from './assets/icons/marker1.png';
+import './styles/index.css'
+import marker1 from './assets/icons/marker1.png'
 
 const App = () => {
-  const defaultState = {
-    center: [55.751574, 37.573856],
-    zoom: 5,
-  };
-
   return (
-    <YMaps>
+    <YMaps
+      query={{
+        apikey: 'ccc18204-547d-4626-a187-3251f258a2d0',
+        ns: 'use-load-option',
+        load: 'Map,Placemark,control.ZoomControl,control.FullscreenControl,geoObject.addon.balloon',
+      }}
+    >
       Beer
       <h1 className="text-lg font-serif font-bold text-rose-600">MAP</h1>
       <Map
-        defaultState={defaultState}
+        defaultState={{
+          center: [62.0397, 129.7422],
+          zoom: 20,
+          controls: ['zoomControl', 'fullscreenControl'],
+        }}
         modules={['layout.ImageWithContent']}
         width="80vw"
         height="80vh"
@@ -34,14 +40,14 @@ const App = () => {
             iconImageOffset: [0, 0],
           }}
           properties={{
-            balloonContent: '<h1>BEEER</h1>',
+            balloonContent: `<h1 className='text-lg font-mono font-bold'>BEEER</h1>`,
           }}
           modules={['geoObject.addon.balloon', 'geoObject.addon.hint']}
           geometry={[55.684758, 37.738521]}
         />
       </Map>
     </YMaps>
-  );
-};
+  )
+}
 
-export default App;
+export default App
