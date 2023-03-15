@@ -21,6 +21,16 @@ const App = () => {
     >
       Beer
       <h1 className="text-lg font-serif font-bold text-rose-600">MAP</h1>
+      <div>
+        <ul>
+          <li>
+            <a href={`/registration`}>Registration</a>
+          </li>
+          <li>
+            <a href={`/authorization`}>Authorization</a>
+          </li>
+        </ul>
+      </div>
       <Map
         defaultState={{
           center: [62.0397, 129.7422],

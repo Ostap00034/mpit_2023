@@ -47,7 +47,12 @@ const AuthorizationScreen = () => {
           <h4 className="text-[#747474] font-inter text-[14px]">
             У вас есть свой аккаунт?
           </h4>
-          <a className="text-[#2F6ED9] text-[14px] font-bold ml-[4px]">Войти</a>
+          <a
+            href="/registration"
+            className="text-[#2F6ED9] text-[14px] font-bold ml-[4px]"
+          >
+            Войти
+          </a>
         </div>
       </form>
     </div>
