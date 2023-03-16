@@ -1,57 +1,86 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/index.css'
 import logo from '../assets/logo.svg'
+import Input from './ui/Input'
+import Button from './ui/button'
 
 const RegistrationScreen = () => {
+  const [phoneNumber, setPhoneNumber] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [password2, setPassword2] = useState('')
+
   return (
     <div className="flex justify-center items-center w-full h-screen">
       <form className="flex flex-col justify-center items-center">
         <img src={logo} className="w-[187px] h-[162px]" alt="site logo" />
         <h1 className="font-inter font-medium leading-6 text-[30px] mt-[16px] leading-[38px] text-[#1E1E1E]">
-          Войдите в свой аккаунт
+          Создайте свой аккаунт
         </h1>
         <h2 className="font-inter font-normal text-[#747474] text-[16px] mt-[16px]">
           Добро пожаловать!
         </h2>
-        <div className="flex flex-col mt-[16px]">
-          <label
-            htmlFor="login"
-            className="font-inter text-[14px] font-medium mt-[16x]"
-          >
-            Email/Номер телефона
-          </label>
-          <input
-            id="login"
+        <div className="flex flex-col">
+          <Input
+            required={true}
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            label="Номер телефона"
             type="text"
-            placeholder="Введите свою почту/Номер телефона"
-            className="mt-[6px] mb-[16px] min-w-[380px] w-[19vw] h-[auto] border-solid border-[1px] border-[#D0D5DD] py-[10px] px-[14px] text-inter text-[16px] leading-6 rounded-[8px]"
+            placeholder="Введите номер телефона"
           />
-          <label
-            htmlFor="password"
-            className="font-inter text-[14px] font-medium"
-          >
-            Пароль
-          </label>
-          <input
-            id="password"
+          <Input
+            required={true}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            label="Email"
+            type="email"
+            placeholder="Введите email"
+          />
+          <Input
+            required={true}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            label="Пароль*"
             type="password"
-            placeholder="Введите свой пароль"
-            className="mt-[6px] min-w-[380px] w-[19vw] h-[auto] border-solid border-[1px] border-[#D0D5DD] py-[10px] px-[14px] text-inter text-[16px] leading-6 rounded-[8px]"
+            placeholder="Введите пароль"
+          />
+          <Input
+            required={true}
+            value={password2}
+            onChange={(e) => setPassword2(e.target.value)}
+            label="Введите пароль повторно*"
+            type="password"
+            placeholder="Введите пароль"
           />
         </div>
 
-        <button className="bg-[#2F6ED9] mt-[24px] min-w-[380px] w-[19vw] h-[auto] py-[10px] px-[14px] text-inter text-[16px] font-inter font-semibold tracking-[0.05em] text-white not-italic leading-6 rounded-[8px]">
-          Войти
-        </button>
+        {/* <Button text="Дальше" route="/verification" /> */}
+        <Button
+          onClick={(e) => {
+            e.preventDefault()
+            if (phoneNumber && email && password && password2) {
+              if (password === password2) {
+                console.log(phoneNumber, email, password)
+              } else {
+                alert('Пароли не совпадают!')
+              }
+            } else {
+              alert('Введите данные!!!')
+            }
+          }}
+          text="Дальше"
+        />
+
         <div className="flex flex-row items-center mt-[16px]">
           <h4 className="text-[#747474] font-inter text-[14px]">
-            У вас нет аккаунта?
+            Уже есть аккаунт?
           </h4>
           <a
             href="/authorization"
             className="text-[#2F6ED9] text-[14px] font-bold ml-[4px]"
           >
-            Зарегистрироваться
+            Войти
           </a>
         </div>
       </form>

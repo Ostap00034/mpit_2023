@@ -4,7 +4,6 @@ import {
   Map,
   Placemark,
   GeolocationControl,
-  ZoomControl,
 } from '@pbe/react-yandex-maps'
 
 import './styles/index.css'
@@ -28,6 +27,9 @@ const App = () => {
           </li>
           <li>
             <a href={`/authorization`}>Authorization</a>
+          </li>
+          <li>
+            <a href={`/request`}>Requests</a>
           </li>
         </ul>
       </div>
