@@ -9,6 +9,8 @@ import VerificationScreen from './components/VerificationScreen'
 import RequestsScreen from './components/RequestsScreen'
 // import store from './store/index'
 import MainScreen from './components/MainScreen'
+import OrderingScreen from './components/OrderingScreen'
+import SupportScreen from './components/SupportScreen'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
   {
     path: '/requests',
     element: <RequestsScreen />,
+  },
+  {
+    path: '/ordering',
+    element: <OrderingScreen />,
+  },
+  {
+    path: '/support',
+    element: <SupportScreen />,
   },
 ])
 

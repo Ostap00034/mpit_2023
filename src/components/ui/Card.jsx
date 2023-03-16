@@ -33,7 +33,12 @@ const Card = ({ type, address, description, author_name, number }) => {
       <div className="border-[1px] border-[#0F1C2A]-20/100 mt-[8px] p-[6px] mb-[20px]">
         Описание: {description}
       </div>
-      <Button text="Заказать" href="/ordering" withoutMarginTop />
+      <Button
+        text="Заказать"
+        onClick={() => {}}
+        route="/ordering"
+        withoutMarginTop
+      />
     </div>
   )
 }

@@ -4,7 +4,7 @@ import logo from '../assets/logo.svg'
 import Input from './ui/Input'
 import Button from './ui/button'
 
-const OrderingScreen = () => {
+const SupportScreen = () => {
   const [phoneNumber, setPhoneNumber] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -16,19 +16,16 @@ const OrderingScreen = () => {
         <h1 className="font-inter font-medium leading-6 text-[30px] mt-[16px] leading-[38px] text-[#1E1E1E]">
           Заполните форму
         </h1>
-        <Input type="text" label="Направление" placeholder="Город, село" />
-        <Input type="date" label="Дата начала" placeholder="Выберите" />
-        <Input type="date" label="Дата конца" placeholder="Выберите" />
         <Input
-          type="number"
-          label="Количество"
-          placeholder="Количество"
-          width={50}
+          type="text"
+          label="Вопрос: "
+          placeholder="Опишите вашу проблему"
+          isArea
         />
-        <Button text="Забронировать" onClick={() => {}} route="/" width={120} />
+        <Button text="Отправить" onClick={() => {}} route="/" width={120} />
       </form>
     </div>
   )
 }
 
-export default OrderingScreen
+export default SupportScreen
