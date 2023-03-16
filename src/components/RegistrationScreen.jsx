@@ -55,8 +55,8 @@ const RegistrationScreen = () => {
           />
         </div>
 
-        {/* <Button text="Дальше" route="/verification" /> */}
-        <Button
+        <Button text="Дальше" route="/verification" />
+        {/* <Button
           onClick={(e) => {
             e.preventDefault()
             if (phoneNumber && email && password && password2) {
@@ -70,7 +70,7 @@ const RegistrationScreen = () => {
             }
           }}
           text="Дальше"
-        />
+        /> */}
 
         <div className="flex flex-row items-center mt-[16px]">
           <h4 className="text-[#747474] font-inter text-[14px]">

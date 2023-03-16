@@ -5,11 +5,16 @@ import {
   Placemark,
   GeolocationControl,
 } from '@pbe/react-yandex-maps'
+// import useAuth from './hooks/useAuth'
 
 import './styles/index.css'
 import marker1 from './assets/icons/marker1.png'
 
 const App = () => {
+  // const { isAuth, email, id, phoneNumber } = useAuth()
+
+  // console.log(isAuth)
+
   return (
     <YMaps
       query={{

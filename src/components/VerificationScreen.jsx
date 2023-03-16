@@ -3,15 +3,8 @@ import '../styles/index.css'
 import logo from '../assets/logo.svg'
 import Input from './ui/Input'
 import Button from './ui/button'
-import { useDispatch, useSelector } from 'react-redux'
 
 const VerificationScreen = () => {
-  const { loading, userInfo, error, success } = useSelector(
-    (state) => state.auth
-  )
-
-  const dispatch = useDispatch()
-
   return (
     <div className="flex justify-center items-center w-full h-screen">
       <form className="flex flex-col justify-center items-center">

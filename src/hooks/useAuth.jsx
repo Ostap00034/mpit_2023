@@ -1,12 +1,14 @@
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 
-export function useAuth() {
-  const { email, id, phoneNumber } = useSelector((state) => state.user)
+// const useAuth = () => {
+//   const { email, id, phoneNumber } = useSelector((state) => state.user)
 
-  return {
-    isAuth: !!email,
-    email,
-    id,
-    phoneNumber,
-  }
-}
+//   return {
+//     isAuth: Boolean(email),
+//     email,
+//     id,
+//     phoneNumber,
+//   }
+// }
+
+// export default useAuth
