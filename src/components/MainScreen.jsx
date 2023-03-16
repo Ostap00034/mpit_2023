@@ -5,10 +5,11 @@ import userIcon from '../assets/icons/user.svg'
 
 import Button from './ui/button'
 import Input from './ui/Input'
+import Card from './ui/Card'
 
 const MainScreen = () => {
   return (
-    <div className="w-full h-screen bg-purple-600">
+    <div className="w-full h-screen">
       <header className="w-full h-[100px] bg-white flex flex-row justify-between items-center px-[72px]">
         <div className="flex flex-row items-center">
           <img src={minilogo} alt="site logo" className="w-[56px] h-[56px]" />
@@ -75,6 +76,43 @@ const MainScreen = () => {
             />
           </div>
         </div>
+      </div>
+      <div className="w-full h-auto flex flex-row flex-wrap justify-start items-start p-[20px] ">
+        <Card
+          type={1}
+          address="Дом2 квартира 43"
+          description="Большая квартира в центре города"
+          author_name="Иванов Виктор"
+          number="8965947853"
+        />
+        <Card
+          type={0}
+          address="улица Ирнова Дом 1 5 комната"
+          description="Маленька комната в дали от города"
+          author_name="Дьяконов Альберт"
+          number="8932785323"
+        />
+        <Card
+          type={2}
+          address="Дом1 квартира 4"
+          description="Большая квартира в центре города"
+          author_name="Иванов Виктор"
+          number="8965947853"
+        />
+        <Card
+          type={2}
+          address="Дом1 квартира 4"
+          description="Большая квартира в центре города"
+          author_name="Иванов Виктор"
+          number="8965947853"
+        />
+        <Card
+          type={2}
+          address="Дом1 квартира 4"
+          description="Большая квартира в центре города"
+          author_name="Иванов Виктор"
+          number="8965947853"
+        />
       </div>
     </div>
   )
