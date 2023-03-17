@@ -37,7 +37,7 @@ const MainScreen = () => {
           <img
             src={userIcon}
             alt="userIcon"
-            className="w-[40px] h-[40px] mx-4"
+            className="w-[40px] h-[40px] ml-4"
           />
 
           <h2 className="text-[20px] text-[#0F1C2A] text-jost leading-[20px] font-normal mx-[20px]">
